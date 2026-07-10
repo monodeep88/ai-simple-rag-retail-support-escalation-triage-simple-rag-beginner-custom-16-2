@@ -1,0 +1,250 @@
+{
+  "mode": "ai",
+  "project_title": "Retail Support Escalation Triage",
+  "short_description": "A simple RAG (Red, Amber, Green) project for retail support escalation triage",
+  "domain_summary": "Retail support escalation triage involves categorizing customer support requests based on their urgency and complexity.",
+  "user_persona": "Retail Support Agent: An agent responsible for handling customer support requests in a retail setting",
+  "architecture_notes": [
+    "The architecture is designed to be scalable, modular, and maintainable. Each service has its own database and communicates with other services through APIs."
+  ],
+  "backend_modules": [
+    "Request Categorization Service: Uses machine learning algorithms to categorize customer support requests",
+    "Knowledge Base Service: Provides access to a knowledge base of retail-related information",
+    "Analytics Service: Generates analytics and insights on customer support requests"
+  ],
+  "frontend_features": [
+    "Request Categorization Interface: Allows agents to categorize customer support requests",
+    "Knowledge Base Interface: Provides access to the knowledge base for agents",
+    "Analytics Interface: Displays analytics and insights to agents"
+  ],
+  "data_sources": [
+    "Customer Support Database: Stores customer support requests and their corresponding categorizations",
+    "Knowledge Base Database: Stores retail-related information and knowledge base articles"
+  ],
+  "testing_strategy": [
+    "Unit testing, integration testing, and end-to-end testing using a testing framework such as Pytest"
+  ],
+  "starter_questions": [
+    "What is the primary goal of retail support escalation triage?",
+    "How can we efficiently categorize customer support requests?",
+    "What are the key components of a scalable and maintainable architecture for retail support escalation triage?"
+  ],
+  "workflow_steps": [
+    "Request Receipt: Agents receive customer support requests",
+    "Request Categorization: Agents categorize customer support requests using the Request Categorization Service",
+    "Knowledge Base Access: Agents access the knowledge base using the Knowledge Base Service",
+    "Analytics Generation: The Analytics Service generates analytics and insights on customer support requests"
+  ],
+  "business_rules": [
+    "Categorization Rule: Requests are categorized based on their urgency and complexity",
+    "Knowledge Base Rule: Agents must access the knowledge base before responding to customer support requests",
+    "Analytics Rule: Analytics and insights are generated on a daily basis"
+  ],
+  "sample_documents": [
+    {
+      "filename": "customer_support_request.txt",
+      "content": "Customer is experiencing issues with their order."
+    },
+    {
+      "filename": "knowledge_base_article.txt",
+      "content": "Information on how to troubleshoot common issues with orders."
+    }
+  ],
+  "tool_catalog": [
+    {
+      "name": "Request Categorization Service",
+      "description": "Uses machine learning algorithms to categorize customer support requests"
+    },
+    {
+      "name": "Knowledge Base Service",
+      "description": "Provides access to a knowledge base of retail-related information"
+    },
+    {
+      "name": "Analytics Service",
+      "description": "Generates analytics and insights on customer support requests"
+    }
+  ],
+  "agent_plan": [
+    {
+      "name": "Architecture Agent",
+      "role": "Define app boundaries, data flow, runtime stack, and integration points.",
+      "outputs": [
+        "The architecture is designed to be scalable, modular, and maintainable. Each service has its own database and communicates with other services through APIs."
+      ]
+    },
+    {
+      "name": "Backend Agent",
+      "role": "Design FastAPI modules, service contracts, validation, and error handling.",
+      "outputs": [
+        "Request Categorization Service: Uses machine learning algorithms to categorize customer support requests",
+        "Knowledge Base Service: Provides access to a knowledge base of retail-related information",
+        "Analytics Service: Generates analytics and insights on customer support requests"
+      ]
+    },
+    {
+      "name": "Frontend Agent",
+      "role": "Design React screens, state flow, controls, and user feedback states.",
+      "outputs": [
+        "Request Categorization Interface: Allows agents to categorize customer support requests",
+        "Knowledge Base Interface: Provides access to the knowledge base for agents",
+        "Analytics Interface: Displays analytics and insights to agents"
+      ]
+    },
+    {
+      "name": "Database Agent",
+      "role": "Design persistence models, sample data, indexes, and audit records.",
+      "outputs": [
+        "Run history",
+        "Source document metadata",
+        "Generated workflow audit records"
+      ]
+    },
+    {
+      "name": "Testing Agent",
+      "role": "Define contract tests, smoke tests, and generated project validation.",
+      "outputs": [
+        "Unit testing, integration testing, and end-to-end testing using a testing framework such as Pytest"
+      ]
+    },
+    {
+      "name": "DevOps Agent",
+      "role": "Define environment variables, Docker workflow, and repository packaging.",
+      "outputs": [
+        "Docker-ready project",
+        "Environment sample file",
+        "GitHub repository upload"
+      ]
+    },
+    {
+      "name": "Reviewer Agent",
+      "role": "Review the generated plan for completeness, security, and portfolio quality.",
+      "outputs": [
+        "Request Receipt: Agents receive customer support requests",
+        "Request Categorization: Agents categorize customer support requests using the Request Categorization Service",
+        "Knowledge Base Access: Agents access the knowledge base using the Knowledge Base Service",
+        "Analytics Generation: The Analytics Service generates analytics and insights on customer support requests"
+      ]
+    }
+  ],
+  "model_provider": "groq",
+  "model_name": "llama-3.1-8b-instant",
+  "fallback_reason": "Gemini limit reached. Automatically switched to Groq.",
+  "architecture": "Customer Support KB Search",
+  "architecture_template_id": 9,
+  "architecture_template_path": "templates/simple-rag/customer-support-kb-search",
+  "architecture_description": "Customer Support KB Search for knowledge base response drafting.",
+  "architecture_version": "1.0",
+  "architecture_origin": "built_in",
+  "architecture_quality_score": 100,
+  "architecture_evolution_notes": "",
+  "architecture_technology": null,
+  "architecture_source_version": null,
+  "validation_pipeline": [
+    "pytest",
+    "npm install",
+    "npm run build",
+    "docker compose config",
+    "docker compose build"
+  ],
+  "problem_statement": "Build a portfolio-ready Simple RAG application for Retail Support Escalation Triage Simple RAG - Beginner Custom 16 that returns explainable answers with sources and timeline evidence.",
+  "target_users": [
+    "Students",
+    "Junior developers",
+    "Portfolio reviewers",
+    "Interviewers"
+  ],
+  "functional_requirements": [
+    "Accept a user question or task from the React UI.",
+    "Validate request shape and reject empty input.",
+    "Execute the Simple RAG workflow with observable timeline steps.",
+    "Return answer, cited sources, timeline, and project metadata.",
+    "Persist each run for debugging, demos, and interview explanation."
+  ],
+  "non_functional_requirements": [
+    "Keep local deterministic fallback behavior so the repo runs without paid API keys.",
+    "Avoid logging secrets or raw provider credentials.",
+    "Keep API responses stable enough for frontend and tests.",
+    "Support Docker-based local deployment and PostgreSQL production storage.",
+    "Keep generated documentation accurate enough for portfolio review."
+  ],
+  "entities": [
+    "RunLog",
+    "SourceDocument",
+    "RetrievedChunk",
+    "TimelineStep",
+    "EmbeddingRecord",
+    "VectorCollection"
+  ],
+  "database_tables": [
+    "run_logs",
+    "source_documents",
+    "retrieved_chunks",
+    "timeline_steps"
+  ],
+  "api_endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/health",
+      "purpose": "Health check for deployment and monitoring."
+    },
+    {
+      "method": "POST",
+      "path": "/api/ask",
+      "purpose": "Run the Simple RAG workflow for a user question."
+    },
+    {
+      "method": "GET",
+      "path": "/api/runs",
+      "purpose": "Return recent stored run logs for review and debugging."
+    }
+  ],
+  "workflows": [
+    "Request Receipt: Agents receive customer support requests",
+    "Request Categorization: Agents categorize customer support requests using the Request Categorization Service",
+    "Knowledge Base Access: Agents access the knowledge base using the Knowledge Base Service",
+    "Analytics Generation: The Analytics Service generates analytics and insights on customer support requests"
+  ],
+  "architecture_components": [
+    "React frontend",
+    "FastAPI backend",
+    "Pipeline service",
+    "Vector/search service",
+    "SQL database",
+    "Optional LLM provider"
+  ],
+  "sequence_flows": [
+    "Main ask flow",
+    "RAG retrieval flow",
+    "Agent execution flow",
+    "Provider fallback flow"
+  ],
+  "security_controls": [
+    "Input validation",
+    "CORS allowlist",
+    "Secret-only environment variables",
+    "Safe logging",
+    "Rate limiting recommendation"
+  ],
+  "scalability_plan": [
+    "Move long runs to a queue",
+    "Use PostgreSQL in production",
+    "Use managed vector DB when data grows",
+    "Cache repeated retrievals",
+    "Add metrics and traces"
+  ],
+  "interview_topics": [
+    "Problem statement",
+    "Architecture layers",
+    "DFD levels",
+    "Database schema",
+    "API contract",
+    "Security",
+    "Scaling"
+  ],
+  "documentation_quality_pipeline": [
+    "enrich_blueprint",
+    "write_design_docs",
+    "validate_required_docs",
+    "qa_score_before_push"
+  ]
+}
